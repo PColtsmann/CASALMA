@@ -11,15 +11,16 @@ This should be absolute path to your ALMA project code directory that contains t
 """
 
 for i in glob.glob('*'):
-	if i == glob.glob('*')[0]:
-		directory1 = os.getcwd()
-	directory = directory1 + '/' + i
-	os.chdir(directory)
-	for j in glob.glob('*'):
-		if j == glob.glob('*')[0]:
-			directory2 = os.getcwd()
-		directory = directory2 + '/' + j
-		os.chdir(directory)
-		os.chdir(glob.glob('*')[0])
-		os.chdir('script')
-		execfile(glob.glob('*.scriptForPI.py')[0])
+    if i == glob.glob('*')[0]:
+        directory1 = os.getcwd()
+    directory = directory1 + '/' + i
+    os.chdir(directory)
+    for j in glob.glob('*'):
+        if j == glob.glob('*')[0]:
+                directory2 = os.getcwd()
+        directory = directory2 + '/' + j
+        os.chdir(directory)
+        os.chdir(glob.glob('*')[0])
+        if not glob.glob('calibrated'):
+            os.chdir('script')
+            execfile(glob.glob('*.scriptForPI.py')[0])
