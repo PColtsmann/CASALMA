@@ -2,7 +2,9 @@ import os
 import glob
 
 """
-Executing this file from within 'casa --pipeline' will execute all 'scriptForPI.py's that are contained within your ALMA project, automatically calibrating all of your .asdm's into .ms's. The form of the script can be easily modified to only calibrate certain asdms or to operate over multiple projects/only over certain Scheduling Blocks etc.
+Executing this file from within 'casa --pipeline' will execute all 'scriptForPI.py's that are contained within your ALMA
+project, automatically calibrating all of your .asdm's into .ms's. The form of the script can be easily modified to only
+calibrate certain asdms or to operate over multiple projects/only over certain Scheduling Blocks etc.
 """
 
 os.chdir('yourpath/projectcode')
